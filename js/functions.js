@@ -2,12 +2,7 @@ Array.prototype.last = function() {
   return this[this.length - 1];
 }
 
-function format_date(date){
-  current_datetime = date.split('/');
-  return current_datetime[1] + '/' + current_datetime[0]
-}
-
-function series_by(country, data){
+function seriesBy(country, data){
   let array = [];
 
   for (var [key, value] of Object.entries(data)) {
@@ -24,14 +19,20 @@ function series_by(country, data){
 }
 
 function countDays(data) {
-  return Array.from(Array(data).keys())
+  let array = [];
+  for (var index = 1; index <= data; index++) {
+    array.push(index)
+  }
+  
+  return array
 }
+
 
 function appendCountryInfo(options){
   for (var [key, value] of Object.entries(options.series)) {
     var tag = document.createElement("div");
     var text = document.createTextNode(`
-      ${value['name']}: ${options['xaxis']['categories'].length + 1} 
+      ${value['name']}: ${options['xaxis']['categories'].length} 
       dias (${value['data'][options['xaxis']['categories'].length - 1]})
     `);
     tag.appendChild(text);
