@@ -24,6 +24,6 @@ p {
 }
 
 #chart {
-  max-width: 750px;
+  min-width: 750px;
 }
 
