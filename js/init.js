@@ -9,9 +9,9 @@ request.onload = function() {
       type: 'line'
     },
     series: [
-      { name: 'Brasil', data: seriesBy('brazil', data)}, 
+      { name: 'Brasil', data: seriesBy('brazil', data)},
       { name: 'Itália', data: seriesBy('italy', data)},
-      { name: 'Estados Unidos', data: seriesBy('usa', data)},
+      { name: 'EUA', data: seriesBy('usa', data)},
       { name: 'Alemanha', data: seriesBy('germany', data)},
       { name: 'Espanha', data: seriesBy('spain', data)}
     ],
@@ -19,11 +19,11 @@ request.onload = function() {
       categories: countDays(seriesBy('brazil', data).length)
     }
   }
-  
+
   appendCountryInfo(options);
-  
+
   let chart = new ApexCharts(document.querySelector("#chart"), options);
-  
+
   chart.render();
 }
 
