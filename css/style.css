@@ -30,11 +30,25 @@ p {
 }
 
 #chart {
-    width: 750px;
+    width: 100%;
 }
 
 #description div {
     padding: 10px;
+}
+
+@media only screen and (max-width: 420px) {
+    #chart {
+        overflow: auto;
+    }
+
+    #description div {
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
 }
 
 @media only screen and (min-width: 990px) {
