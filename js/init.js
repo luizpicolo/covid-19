@@ -9,14 +9,14 @@ request.onload = function() {
       type: 'line'
     },
     series: [
-      { name: 'Brasil', data: seriesBy('brazil', data)},
-      { name: 'Itália', data: seriesBy('italy', data)},
-      { name: 'EUA', data: seriesBy('usa', data)},
-      { name: 'Alemanha', data: seriesBy('germany', data)},
-      { name: 'Espanha', data: seriesBy('spain', data)}
+      { name: 'Brasil', data: seriesBy('Brazil', data)},
+      { name: 'Itália', data: seriesBy('Italy', data)},
+      { name: 'EUA', data: seriesBy('USA', data)},
+      { name: 'Alemanha', data: seriesBy('Germany', data)},
+      { name: 'Espanha', data: seriesBy('Spain', data)}
     ],
     xaxis: {
-      categories: countDays(seriesBy('brazil', data).length)
+      categories: countDays(seriesBy('Brazil', data).length)
     }
   }
 
