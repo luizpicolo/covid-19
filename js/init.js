@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://corona.lmao.ninja/v2/historical', true)
+request.open('GET', 'https://coronavirus-tracker-api.herokuapp.com/all', true)
 
 request.onload = function() {
   let data = JSON.parse(this.response);
@@ -11,7 +11,7 @@ request.onload = function() {
     series: [
       { name: 'Brasil', data: seriesBy('Brazil', data)},
       { name: 'Itália', data: seriesBy('Italy', data)},
-      { name: 'EUA', data: seriesBy('USA', data)},
+      { name: 'EUA', data: seriesBy('US', data)},
       { name: 'Alemanha', data: seriesBy('Germany', data)},
       { name: 'Espanha', data: seriesBy('Spain', data)}
     ],

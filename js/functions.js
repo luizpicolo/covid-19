@@ -5,16 +5,16 @@ Array.prototype.last = function() {
 function seriesBy(country, data){
   let array = [];
 
-  for (var [key, value] of Object.entries(data)) {
+  for (var [key, value] of Object.entries(data.confirmed.locations)) {
     if(value.country == country){
-      for (var [key, value] of Object.entries(value.timeline.cases)) {
+      for (var [key, value] of Object.entries(value.history)) {
         if (value > 0){
-          array.push(value);
+          array.push(value)
         }
-      }  
-    } 
+      }
+    }  
   }
-  
+
   return array
 }
 
