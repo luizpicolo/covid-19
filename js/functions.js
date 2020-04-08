@@ -5,7 +5,7 @@ Array.prototype.last = function() {
 function seriesBy(country, data){
   let array = [];
 
-  for (var [key, value] of Object.entries(data.confirmed.locations)) {
+  for (var [key, value] of Object.entries(data.locations)) {
     if(value.country == country){
       for (var [key, value] of Object.entries(value.history)) {
         if (value > 0){
@@ -28,7 +28,7 @@ function countDays(data) {
 }
 
 
-function appendCountryInfo(options){
+function appendCountryInfo(options, tag_append){
   for (var [key, value] of Object.entries(options.series)) {
     var tag = document.createElement("div");
     var text = document.createTextNode(`
@@ -36,7 +36,7 @@ function appendCountryInfo(options){
       dias (${value['data'][options['xaxis']['categories'].length - 1]})
     `);
     tag.appendChild(text);
-    var element = document.getElementById("description");
+    var element = document.getElementById(tag_append);
     element.appendChild(tag);
   }
 }

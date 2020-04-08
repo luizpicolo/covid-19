@@ -33,8 +33,21 @@ p {
     width: 100%;
 }
 
-#description div {
+#description_confirmed div {
     padding: 10px;
+}
+
+#description_deaths div {
+    padding: 10px;
+}
+
+.radios {
+    margin: 0 0 10px 10px;
+}
+
+.description_subtitle {
+    margin: 0 0 10px 10px;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 420px) {
@@ -69,10 +82,8 @@ p {
     }
 
     .description__container {
-        display: flex;
-        justify-content: flex-end;
-
         width: 100%;
+        margin-top: 100px;
         max-width: 250px;
     }
 }

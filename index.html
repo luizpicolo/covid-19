@@ -8,22 +8,35 @@
   <meta name="description" content="O gráfico apresentado abaixo representa a quantidade de contaminações baseadas na quantidade de dias após a primeira infecção em cada pís" />
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <title>Covid 19 - Relação de datas e paises</title>
+  <title>Covid 19 - Quantidade de contaminação e mortes no Brasil relacionados a mesma quantidade de dias em outros países</title>
 </head>
 <body>
   <section>
     <div class="container">
-        <h1>Relação de dias de contaminação</h1>
-        <p>O gráfico apresentado abaixo representa a quantidade de contaminações baseadas na quantidade de dias após a primeira infecção em cada país.</p>
+        <h1>Quantidade de contaminação e mortes no Brasil relacionadas a a igual quantidade de dias em outros países</h1>
+        <p>O gráfico apresentado abaixo representa a quantidade de contaminações (casos confirmados) baseadas na quantidade de dias após a primeira infecção em cada país relacionados a primeira contaminação confirmada no Brasil</p>
+    </div>
+    <div class="container container--flex">
+      <div class="chat__container">
+        <h2>Casos confirmados</h2>
+        <div id="confirmed"></div>
       </div>
-      <div class="container container--flex">
-        <div class="chat__container">
-          <div id="chart"></div>
-        </div>
-        <div class="description__container">
-          <div id="description"></div>
-        </div>
+      <div class="description__container">
+        <div id="description_confirmed"></div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container container--flex">
+      <div class="chat__container">
+        <h2>Mortes</h2>
+        <div id="deaths"></div>
+      </div>
+      <div class="description__container">
+        <div id="description_deaths"></div>
+      </div>
+    </div>
   </section>
 
   <footer>
